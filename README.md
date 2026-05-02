@@ -2,8 +2,6 @@
 
 A high-performance, single-page developer portfolio with a cyberpunk/hacker-inspired aesthetic. Built with **React**, **FastAPI**, and **Tailwind CSS**, and optimized for deployment on **Google Cloud Run**.
 
-![Portfolio Preview](https://brandon-portfolio-466351933564.us-south1.run.app/assets/index-DUPK2YLy.css) <!-- Note: Replace with actual screenshot path if available -->
-
 ## 🚀 Live Demo
 **[Live URL](https://brandon-portfolio-466351933564.us-south1.run.app)**
 
