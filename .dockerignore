@@ -1,0 +1,15 @@
+node_modules
+dist
+backend/venv
+.git
+.gitignore
+Dockerfile
+.dockerignore
+README.md
+npm-debug.log
+pip-log.txt
+pip-delete-this-directory.txt
+.env
+.venv
+__pycache__
+.pytest_cache

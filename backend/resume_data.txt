@@ -1,0 +1,31 @@
+Brandon Tan Hup Le | Software Engineer
+Loc: Singapore
+
+EDUCATION
+- Nanyang Polytechnic (Apr 2021 - Mar 2024)
+- Diploma in Business & FinTech
+- GPA: 3.98/4.0
+- Highlights: OCBC Bank Silver Medalist, Diploma with Merit, 3x Director's List.
+
+EXPERIENCE
+1. Accenture - App Developer (Mar 2024 - Aug 2024)
+- Developed and maintained enterprise-scale applications.
+- Focus areas: OpenAPI Specs, Microservices, Spring Batch, RedHat PAM (BPMN/DMN).
+
+2. Accenture - Software Engineer Intern (Apr 2023 - Mar 2024)
+- Built robust automation solutions and APIs.
+- Key projects: API Automation Framework (Python/Robot Framework), Lemmatization API (NLTK), Business Rules implementation (FEEL).
+
+SKILLS (Tech Matrix)
+- Systems: Java, Spring Boot, Microservices, Spring Batch, REST APIs, SQL, Docker, Git, GitHub Actions
+- Automation: RedHat PAM (BPMN/DMN), Robot Framework, Python
+- Deployment: AWS, Vercel, Google Cloud Platform, Railway
+- Design: OpenAPI Specs, Swagger, UX/UI
+- Research: Machine Learning, NLTK
+
+PROJECTS
+- Brainhack 2026 Hackathon (Status: In Progress)
+- Developing innovative, secure, and performant solutions under tight deadlines using cutting-edge technologies.
+
+CONTACT
+- LinkedIn: https://www.linkedin.com/in/brandon-tan03/
