@@ -1,4 +1,4 @@
-# V-X CORE: Hacker-Aesthetic Portfolio
+# portfolio_webapp
 
 A high-performance, single-page developer portfolio with a cyberpunk/hacker-inspired aesthetic. Built with **React**, **FastAPI**, and **Tailwind CSS**, and optimized for deployment on **Google Cloud Run**.
 
@@ -69,4 +69,4 @@ gcloud run deploy brandon-portfolio --source . --region <your-region> --allow-un
 - **Secure Chat**: AI-themed chatbot with a local knowledge base (`resume_data.txt`).
 
 ## 📄 License
-MIT License - © 2026 Brandon Tan Hup Le
+MIT License - © 2026 Brandon Tan
