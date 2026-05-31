@@ -66,8 +66,8 @@ export default function BentoGrid() {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto mb-20 px-4 md:px-0">
-      <h2 className="text-3xl font-bold mb-10 text-center neon-text-primary uppercase tracking-widest">
+    <div className="w-full max-w-4xl mx-auto mb-12 sm:mb-20 px-4 md:px-0">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-10 text-center neon-text-primary uppercase tracking-wider sm:tracking-widest">
         <span className="text-secondary">&lt;</span> Tech_Matrix <span className="text-secondary">/&gt;</span>
       </h2>
 
@@ -76,14 +76,14 @@ export default function BentoGrid() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
-        className="grid grid-cols-1 md:grid-cols-6 gap-4 auto-rows-[200px]"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-3 sm:gap-4 auto-rows-auto md:auto-rows-[200px]"
       >
         {skillsData.map((sector) => (
           <motion.div
             key={sector.id}
             variants={itemVariants}
             whileHover={{ scale: 0.98 }}
-            className={`glass-panel p-6 flex flex-col justify-between group cursor-crosshair ${sector.colSpan} ${sector.color === 'secondary' ? 'hover:border-secondary/70 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]' : 'glass-panel-hover'
+            className={`glass-panel p-4 sm:p-6 flex flex-col justify-between group cursor-crosshair min-h-[160px] md:min-h-0 ${sector.colSpan} ${sector.color === 'secondary' ? 'hover:border-secondary/70 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]' : 'glass-panel-hover'
               }`}
           >
             <div>

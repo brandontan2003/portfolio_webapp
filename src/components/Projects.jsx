@@ -32,8 +32,8 @@ export default function Projects() {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto mb-20 px-4 md:px-0">
-      <h2 className="text-3xl font-bold mb-10 text-center neon-text-primary uppercase tracking-widest">
+    <div className="w-full max-w-4xl mx-auto mb-16 sm:mb-20 px-4 md:px-0">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-10 text-center neon-text-primary uppercase tracking-wider sm:tracking-widest">
         <span className="text-secondary">&lt;</span> Active_Projects <span className="text-secondary">/&gt;</span>
       </h2>
 
@@ -48,19 +48,20 @@ export default function Projects() {
           <motion.div
             key={project.id}
             variants={itemVariants}
-            className={`glass-panel p-6 relative group overflow-hidden ${
+            className={`glass-panel p-4 sm:p-6 relative group overflow-hidden ${
               project.color === 'secondary' ? 'glass-panel-purple' : 'glass-panel-hover'
             }`}
           >
-            {/* Status Indicator */}
-            <div className="absolute top-4 right-4 flex items-center space-x-2 bg-slate-900/80 px-3 py-1 rounded border border-primary/30">
-              <Activity className="w-4 h-4 text-primary animate-pulse" />
-              <span className="text-xs font-mono text-primary uppercase">{project.status}</span>
+            {/* Responsive Card Header: Icon & Status Badge */}
+            <div className="flex justify-between items-center mb-4">
+              <FolderOpen className={`w-8 h-8 ${
+                project.color === 'secondary' ? 'text-secondary' : 'text-primary'
+              }`} />
+              <div className="flex items-center space-x-2 bg-slate-900/80 px-3 py-1 rounded border border-primary/30 shrink-0">
+                <Activity className="w-4 h-4 text-primary animate-pulse" />
+                <span className="text-xs font-mono text-primary uppercase">{project.status}</span>
+              </div>
             </div>
-
-            <FolderOpen className={`w-8 h-8 mb-4 ${
-              project.color === 'secondary' ? 'text-secondary' : 'text-primary'
-            }`} />
 
             <h3 className={`text-xl font-bold mb-3 ${
               project.color === 'secondary' ? 'neon-text-secondary' : 'neon-text-primary'

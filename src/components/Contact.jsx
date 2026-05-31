@@ -4,8 +4,8 @@ import { Link, Mail, ExternalLink } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <div className="w-full max-w-4xl mx-auto mb-20 px-4 md:px-0 text-center">
-      <h2 className="text-3xl font-bold mb-10 neon-text-secondary uppercase tracking-widest">
+    <div className="w-full max-w-4xl mx-auto mb-12 sm:mb-20 px-4 md:px-0 text-center">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-10 neon-text-secondary uppercase tracking-wider sm:tracking-widest">
         <span className="text-primary">&lt;</span> Establish_Connection <span className="text-primary">/&gt;</span>
       </h2>
 
@@ -13,10 +13,10 @@ export default function Contact() {
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className="glass-panel p-10 relative overflow-hidden group"
+        className="glass-panel p-5 sm:p-8 md:p-10 relative overflow-hidden group"
       >
         <div className="relative z-10">
-          <p className="text-lg text-slate-300 mb-8 font-mono">
+          <p className="text-sm sm:text-base md:text-lg text-slate-300 mb-6 sm:mb-8 font-mono">
             "Direct transmission lines are open. Ready for professional integration."
           </p>
 
@@ -25,7 +25,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/brandon-tan03/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-3 px-8 py-4 bg-primary/10 border border-primary/50 text-primary rounded-sm hover:bg-primary/20 transition-all duration-300 group neon-border-primary"
+              className="flex items-center space-x-3 px-5 sm:px-8 py-3 sm:py-4 bg-primary/10 border border-primary/50 text-primary rounded-sm hover:bg-primary/20 transition-all duration-300 group neon-border-primary text-sm sm:text-base"
             >
               <Link className="w-6 h-6" />
               <span className="font-bold uppercase tracking-wider">LinkedIn Profile</span>
@@ -44,7 +44,7 @@ export default function Contact() {
         <div className="absolute inset-0 bg-primary/5 animate-pulse opacity-20 pointer-events-none"></div>
       </motion.div>
 
-      <footer className="mt-20 text-slate-500 font-mono text-xs uppercase tracking-[0.3em]">
+      <footer className="mt-10 sm:mt-20 text-slate-500 font-mono text-[10px] sm:text-xs uppercase tracking-widest sm:tracking-[0.3em]">
         © 2026 Brandon Tan Hup Le // V-X Dossier v1.0.4 // All Rights Reserved
       </footer>
     </div>

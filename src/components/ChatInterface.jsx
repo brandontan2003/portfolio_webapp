@@ -45,9 +45,9 @@ export default function ChatInterface() {
       setMessages(prev => [...prev, { role: 'assistant', content: data.reply || data.response || 'Connection established but no valid data returned.' }]);
     } catch (error) {
       console.error('Chat error:', error);
-      setMessages(prev => [...prev, { 
-        role: 'system', 
-        content: 'ERROR: CONNECTION TO LOCALHOST:8000 FAILED. PLEASE ENSURE FASTAPI SERVER IS RUNNING WITH RESUME_DATA.TXT.' 
+      setMessages(prev => [...prev, {
+        role: 'system',
+        content: 'ERROR: CONNECTION TO LOCALHOST:8000 FAILED. PLEASE ENSURE FASTAPI SERVER IS RUNNING WITH RESUME_DATA.TXT.'
       }]);
     } finally {
       setIsLoading(false);
@@ -58,13 +58,13 @@ export default function ChatInterface() {
     <>
       {/* Floating Toggle Button */}
       <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 p-4 rounded-full glass-panel-purple z-40 ${isOpen ? 'hidden' : 'block'}`}
+        className={`fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-4 sm:bottom-6 sm:right-6 p-3 sm:p-4 neon-chat-button z-[60] ${isOpen ? 'hidden' : 'block'}`}
       >
-        <Terminal className="w-6 h-6 text-secondary animate-pulse" />
+        <Terminal className="w-5 h-5 sm:w-6 sm:h-6 text-secondary animate-pulse" />
       </motion.button>
 
       {/* Chat Window */}
@@ -74,7 +74,7 @@ export default function ChatInterface() {
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
-            className="fixed bottom-6 right-6 w-80 sm:w-96 h-[500px] z-50 glass-panel flex flex-col overflow-hidden shadow-2xl shadow-primary/20"
+            className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] right-4 left-4 sm:left-auto sm:bottom-6 sm:right-6 w-auto sm:w-96 h-[60vh] sm:h-[500px] max-h-[600px] z-[70] glass-panel flex flex-col overflow-hidden shadow-2xl shadow-primary/20"
           >
             {/* Header */}
             <div className="bg-slate-900/80 p-3 border-b border-primary/30 flex justify-between items-center relative overflow-hidden">
@@ -83,7 +83,7 @@ export default function ChatInterface() {
                 <ShieldAlert className="w-4 h-4 mr-2 text-red-500 animate-pulse" />
                 SECURE_CHANNEL_AI
               </div>
-              <button 
+              <button
                 onClick={() => setIsOpen(false)}
                 className="text-slate-400 hover:text-primary transition-colors"
               >
@@ -94,17 +94,16 @@ export default function ChatInterface() {
             {/* Messages Area */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4 font-mono text-sm scrollbar-thin scrollbar-thumb-primary/30 scrollbar-track-transparent">
               {messages.map((msg, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
-                  <div className={`max-w-[85%] rounded p-3 ${
-                    msg.role === 'user' 
-                      ? 'bg-primary/20 text-primary border border-primary/30 rounded-br-none' 
-                      : msg.role === 'system'
-                        ? 'bg-red-500/20 text-red-400 border border-red-500/30 w-full text-xs font-bold text-center'
-                        : 'bg-slate-800/80 text-slate-300 border border-slate-700 rounded-bl-none'
-                  }`}>
+                  <div className={`max-w-[85%] rounded p-3 ${msg.role === 'user'
+                    ? 'bg-primary/20 text-primary border border-primary/30 rounded-br-none'
+                    : msg.role === 'system'
+                      ? 'bg-red-500/20 text-red-400 border border-red-500/30 w-full text-xs font-bold text-center'
+                      : 'bg-slate-800/80 text-slate-300 border border-slate-700 rounded-bl-none'
+                    }`}>
                     {msg.content}
                   </div>
                 </div>
@@ -122,17 +121,17 @@ export default function ChatInterface() {
             </div>
 
             {/* Input Area */}
-            <form onSubmit={handleSend} className="p-3 bg-slate-900/90 border-t border-primary/30 flex items-center gap-2">
+            <form onSubmit={handleSend} className="p-3 sm:p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-slate-900/90 border-t border-primary/30 flex items-center gap-2">
               <span className="text-secondary text-xs font-mono">&gt;</span>
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Query agent..."
-                className="flex-1 bg-transparent border-none outline-none text-sm text-primary placeholder-primary/30 focus:ring-0"
+                className="flex-1 bg-transparent border-none outline-none text-base sm:text-sm text-primary placeholder-primary/30 focus:ring-0"
               />
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 disabled={isLoading || !input.trim()}
                 className="text-primary hover:text-secondary disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >

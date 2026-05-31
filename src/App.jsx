@@ -8,14 +8,14 @@ import ChatInterface from './components/ChatInterface';
 
 function App() {
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+    <div className="min-h-screen bg-background relative overflow-x-hidden">
       {/* Background Circuit Board Grid */}
       <div className="absolute inset-0 bg-circuit-board opacity-[0.15] pointer-events-none"></div>
 
       {/* Global Scanline Overlay */}
       <div className="scanline-overlay"></div>
 
-      <main className="container mx-auto px-4 py-12 relative z-10 flex flex-col items-center">
+      <main className="container mx-auto px-3 sm:px-4 py-6 sm:py-12 relative z-10 flex flex-col items-center">
         {/* Terminal Hero Section */}
         <Terminal />
 
